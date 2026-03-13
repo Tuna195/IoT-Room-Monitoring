@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+
+
+    <TextView
+        android:id='@+id/textChartType'
+        android:text="Biểu đồ nhiệt độ phòng"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <WebView
+        android:id="@+id/webViewChart"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="#000000"/>
+
+    <Space android:layout_height="20dp" android:layout_width="match_parent"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/swChartType"
+        android:text="CHẾ ĐỘ HIỂN THỊ: NHIỆT ĐỘ / ĐỘ ẨM"
+        android:textSize="15sp"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF" />
+    <Space android:layout_height="10dp" android:layout_width="match_parent"/>
+    <Button
+        android:id="@+id/btnExportExcel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="XUẤT FILE EXCEL (.CSV)"
+        android:textSize="16sp"
+        android:backgroundTint="#009688"
+        android:textColor="#FFFFFF"
+        android:padding="15dp"/>
+    <Space android:layout_height="10dp" android:layout_width="match_parent"/>
+
+    <Button
+        android:id="@+id/btnViewHistory"
+        android:text="XEM CHI TIẾT LỊCH SỬ (TABLE)"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:backgroundTint="#009688"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+</LinearLayout>

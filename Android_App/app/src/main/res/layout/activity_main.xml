@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    android:gravity="center_horizontal"-->
+<!--    android:padding="24dp"-->
+<!--    android:background="#F5F5F5"-->
+
+<!--    tools:context=".MainActivity">-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Nhiệt độ phòng!"-->
+<!--        android:textSize="16sp"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtTemp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="&#45;&#45; °C"-->
+<!--        android:textSize="64sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="#FF5722"-->
+
+<!--        />-->
+<!--    <Space-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtDieuKhienThietBi"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="ĐIỀU KHIỂN THIẾT BỊ"-->
+<!--        android:textStyle="bold"-->
+<!--        />-->
+<!--    <com.google.android.material.switchmaterial.SwitchMaterial-->
+<!--        android:id="@+id/swFan"-->
+<!--        android:text="Quạt làm mát "-->
+<!--        android:textSize="18sp"-->
+<!--        android:padding="10dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        />-->
+<!--    <Space android:layout_width="match_parent" android:layout_height="20dp"/>-->
+
+<!--    <ToggleButton-->
+<!--        android:id="@+id/btnSystemRecord"-->
+<!--        android:textOn="ĐANG GHI DỮ LIỆU"-->
+<!--        android:textOff="DỪNG GHI DỮ LIỆU"-->
+<!--        android:backgroundTint="#173F54"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtMQTTStatus"-->
+<!--        android:text="Trạng thái server: Mất kết nối"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtESP32Status"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="Thiết bị: Mất kết nối"-->
+<!--        />-->
+<!--    <Button-->
+<!--        android:id="@+id/btnExportExcel"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Xuất báo cáo Excel (.CSV)"-->
+<!--        android:backgroundTint="#4CAF50"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:layout_marginTop="10dp"/>-->
+<!--    <WebView-->
+<!--        android:id="@+id/webViewChart"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="450dp" />-->
+
+<!--</LinearLayout>-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="#009688"
+        app:itemTextColor="#009688" />
+</RelativeLayout>

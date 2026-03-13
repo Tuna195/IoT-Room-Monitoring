@@ -1,0 +1,62 @@
+# ==========================================
+# 1. ANDROID STUDIO & KOTLIN (App Mobile)
+# ==========================================
+# Bỏ qua các file cấu hình máy tính cá nhân (Rất quan trọng)
+local.properties
+/.idea/
+*.iml
+
+# Bỏ qua các thư mục chứa file đã biên dịch (Nặng hàng trăm MB)
+.gradle/
+/build/
+*/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+
+# Bỏ qua file keystore (Nếu sau này bạn ký App lên CH Play)
+*.jks
+*.keystore
+
+# ==========================================
+# 2. ESP32 (PlatformIO / Arduino IDE)
+# ==========================================
+# Nếu bạn dùng PlatformIO (VS Code)
+.pio/
+.vscode/
+
+# Nếu bạn dùng Arduino IDE hoặc build C++
+build/
+*.elf
+*.bin
+*.hex
+*.map
+*.o
+
+# ==========================================
+# 3. SERVER BACKEND (Node-RED, Docker, DB)
+# ==========================================
+# Bỏ qua thư viện của Node.js
+node_modules/
+
+# CỰC KỲ QUAN TRỌNG: Bỏ qua file chứa mật khẩu của Node-RED
+*flows_cred.json
+.config.json.backup
+
+# Bỏ qua các thư mục lưu Database của Docker (Tránh push InfluxDB vài GB lên mạng)
+influxdb_data/
+grafana_data/
+mosquitto_data/
+nodered_data/
+data/
+
+# ==========================================
+# 4. FILE RÁC CỦA HỆ ĐIỀU HÀNH
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

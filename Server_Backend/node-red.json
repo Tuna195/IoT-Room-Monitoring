@@ -1,0 +1,637 @@
+[
+    {
+        "id": "5c5e937acc317fb2",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c7ed5adb855aec25",
+        "type": "inject",
+        "z": "5c5e937acc317fb2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "testing",
+        "payload": "$round($random()*3 + 25)",
+        "payloadType": "jsonata",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e2366c163466dc9",
+        "type": "inject",
+        "z": "5c5e937acc317fb2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "testing",
+        "payload": "$round($random()*30 + 60, 1)",
+        "payloadType": "jsonata",
+        "x": 130,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "656fae40929a6c84",
+        "type": "debug",
+        "z": "5c5e937acc317fb2",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1400,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "636a61975987074c",
+        "type": "mqtt out",
+        "z": "5c5e937acc317fb2",
+        "name": "",
+        "topic": "phong_hoc/nhiet_do",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "437342a52c5a44ea",
+        "x": 380,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4938125b10a891b5",
+        "type": "mqtt in",
+        "z": "5c5e937acc317fb2",
+        "name": "",
+        "topic": "phong_hoc/nhiet_do",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "437342a52c5a44ea",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 550,
+        "y": 280,
+        "wires": [
+            [
+                "7ea92531e5040ebf"
+            ]
+        ]
+    },
+    {
+        "id": "ae1e2daeb0a4a3f1",
+        "type": "ui_switch",
+        "z": "5c5e937acc317fb2",
+        "name": "",
+        "label": "Điều khiển còi",
+        "tooltip": "",
+        "group": "50bb1a635651beb6",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "b9cfbb111b2a4167"
+            ]
+        ]
+    },
+    {
+        "id": "b9cfbb111b2a4167",
+        "type": "mqtt out",
+        "z": "5c5e937acc317fb2",
+        "name": "",
+        "topic": "phong_hoc/coi",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "437342a52c5a44ea",
+        "x": 320,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "222024b5b0d2fdac",
+        "type": "mqtt out",
+        "z": "5c5e937acc317fb2",
+        "name": "",
+        "topic": "phong_hoc/do_am",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "437342a52c5a44ea",
+        "x": 370,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "4fffcbc2dd09d4ee",
+        "type": "mqtt in",
+        "z": "5c5e937acc317fb2",
+        "name": "",
+        "topic": "phong_hoc/do_am",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "559dbf99fd68be03",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 550,
+        "y": 460,
+        "wires": [
+            [
+                "7ea92531e5040ebf"
+            ]
+        ]
+    },
+    {
+        "id": "66d4c46caf39ce48",
+        "type": "mqtt in",
+        "z": "5c5e937acc317fb2",
+        "name": "",
+        "topic": "he_thong/ghi_du_lieu",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "437342a52c5a44ea",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 520,
+        "wires": [
+            [
+                "bdd8514499620879"
+            ]
+        ]
+    },
+    {
+        "id": "bdd8514499620879",
+        "type": "change",
+        "z": "5c5e937acc317fb2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "allow_record",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7ea92531e5040ebf",
+        "type": "function",
+        "z": "5c5e937acc317fb2",
+        "name": "Insert_Data_InfluxDB",
+        "func": "// Lấy giá trị\nvar value = parseFloat(msg.payload);\nvar topic = msg.topic; // Lấy topic để phân biệt\n\nmsg.measurement = \"sensor_data\";\n\n// Tạo object payload động dựa theo topic\nif (topic.includes(\"nhiet_do\")) {\n    msg.payload = {\n        nhiet_do: value\n    };\n} else if (topic.includes(\"do_am\")) {\n    msg.payload = {\n        do_am: value\n    };\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 360,
+        "wires": [
+            [
+                "6aabad4364e4a932"
+            ]
+        ]
+    },
+    {
+        "id": "95890b9dbc9eea52",
+        "type": "influxdb out",
+        "z": "5c5e937acc317fb2",
+        "influxdb": "d959a4537c6efaa8",
+        "name": "influxdb",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1460,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "58a27c686d1044df",
+        "type": "http in",
+        "z": "5c5e937acc317fb2",
+        "name": "http Request Data",
+        "url": "/xuat-bao-cao",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 700,
+        "wires": [
+            [
+                "e6164dc5619834d9"
+            ]
+        ]
+    },
+    {
+        "id": "e6164dc5619834d9",
+        "type": "function",
+        "z": "5c5e937acc317fb2",
+        "name": "Func Query Data",
+        "func": "msg.query = \"SELECT * FROM sensor_data ORDER BY time DESC LIMIT 500\"\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 740,
+        "wires": [
+            [
+                "1025607595eb1a50"
+            ]
+        ]
+    },
+    {
+        "id": "1025607595eb1a50",
+        "type": "influxdb in",
+        "z": "5c5e937acc317fb2",
+        "influxdb": "d959a4537c6efaa8",
+        "name": "",
+        "query": "SELECT mean(\"nhiet_do\") AS \"Nhiet_do\", mean(\"do_am\") AS \"Do_am\" \nFROM \"sensor_data\" \nWHERE time > now() - 1d \nGROUP BY time(1s) \nfill(none)",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 610,
+        "y": 760,
+        "wires": [
+            [
+                "d0239738112e427b"
+            ]
+        ]
+    },
+    {
+        "id": "f3793fbcf53748b3",
+        "type": "csv",
+        "z": "5c5e937acc317fb2",
+        "name": "",
+        "spec": "rfc",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "time,nhiet_do,do_am",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 1010,
+        "y": 760,
+        "wires": [
+            [
+                "e9b41bd011ec057a"
+            ]
+        ]
+    },
+    {
+        "id": "e9b41bd011ec057a",
+        "type": "function",
+        "z": "5c5e937acc317fb2",
+        "name": "func (Header)",
+        "func": "msg.headers = {\n    \"Content-Type\": \"text/csv\",\n    \"Content_disposition\": \"attachment; filename= baocao_nhietdo.csv\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 760,
+        "wires": [
+            [
+                "3892d037029375b4"
+            ]
+        ]
+    },
+    {
+        "id": "3892d037029375b4",
+        "type": "http response",
+        "z": "5c5e937acc317fb2",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1430,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "a1990125d0c08c57",
+        "type": "function",
+        "z": "5c5e937acc317fb2",
+        "name": "Fix Time",
+        "func": "// Lặp qua từng dòng dữ liệu lấy được từ InfluxDB\nmsg.payload = msg.payload.map(row => {\n    // 1. Lấy thời gian gốc (đang là UTC)\n    var date = new Date(row.time);\n    \n    // 2. Chuyển sang giờ Việt Nam (cộng 7 tiếng) và định dạng lại cho đẹp\n    // Kết quả sẽ ra dạng: \"2026-01-07 16:49:53\"\n    var localTime = date.toLocaleString(\"en-GB\", {\n        timeZone: \"Asia/Ho_Chi_Minh\",\n        hour12: false\n    }).replace(\",\", \"\"); // Xóa dấu phẩy giữa ngày và giờ đi cho sạch\n\n    // 3. Ghi đè lại vào trường time\n    row.time = \"'\" + localTime;\n    \n    return row;\n});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 840,
+        "wires": [
+            [
+                "f3793fbcf53748b3"
+            ]
+        ]
+    },
+    {
+        "id": "6aabad4364e4a932",
+        "type": "switch",
+        "z": "5c5e937acc317fb2",
+        "name": "",
+        "property": "allow_record",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "TRUE",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1230,
+        "y": 360,
+        "wires": [
+            [
+                "95890b9dbc9eea52"
+            ]
+        ]
+    },
+    {
+        "id": "b0e719c442bf8758",
+        "type": "mqtt in",
+        "z": "5c5e937acc317fb2",
+        "name": "",
+        "topic": "phong_hoc/lich_su",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "437342a52c5a44ea",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 930,
+        "y": 240,
+        "wires": [
+            [
+                "4caccb18b69d48e2"
+            ]
+        ]
+    },
+    {
+        "id": "4caccb18b69d48e2",
+        "type": "function",
+        "z": "5c5e937acc317fb2",
+        "name": "Split Time - Data",
+        "func": "var rawString = msg.payload.toString().trim();\nvar parts = rawString.split(\",\");\n\nif (parts.length === 3) {\n    var epochSeconds = parseInt(parts[0]);\n    var tempVal = parseFloat(parts[1]); // ✅ ÉP FLOAT\n    var humidVal = parseFloat(parts[2]);\n    msg.measurement = \"sensor_data\";\n\n    msg.payload = {\n        nhiet_do: tempVal,\n        do_am: humidVal,\n        time: new Date(epochSeconds * 1000)\n    };\n\n    return msg;\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 240,
+        "wires": [
+            [
+                "95890b9dbc9eea52",
+                "b4654ac6d35f880e",
+                "656fae40929a6c84"
+            ]
+        ]
+    },
+    {
+        "id": "b4654ac6d35f880e",
+        "type": "debug",
+        "z": "5c5e937acc317fb2",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1460,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d0239738112e427b",
+        "type": "function",
+        "z": "5c5e937acc317fb2",
+        "name": "Group Data",
+        "func": "var rawData = msg.payload;\nvar mergedMap = {};\n\nrawData.forEach(function (item) {\n    // 1. Ép thời gian về chuẩn từng giây (Cắt bỏ phần mili-giây .xxxZ)\n    // Ví dụ: 2026-01-15T12:48:14.593Z -> 2026-01-15T12:48:14\n    var dateObj = new Date(item.time);\n    var timeKey = dateObj.toISOString().slice(0, 19);\n\n    // 2. Tạo khung chứa nếu chưa có\n    if (!mergedMap[timeKey]) {\n        mergedMap[timeKey] = {\n            time: item.time, // Giữ time gốc của dòng đầu tiên để hiển thị\n            nhiet_do: null,  // Đổi thành chữ thường cho khớp CSV\n            do_am: null      // Đổi thành chữ thường\n        };\n    }\n\n    // 3. Kiểm tra và điền dữ liệu (Chấp nhận cả tên Hoa và Thường)\n    // Kiểm tra Nhiệt độ (Nhiet_do hoặc nhiet_do)\n    var valTemp = (item.Nhiet_do !== undefined) ? item.Nhiet_do : item.nhiet_do;\n    if (valTemp !== null && valTemp !== undefined) {\n        mergedMap[timeKey].nhiet_do = valTemp;\n    }\n\n    // Kiểm tra Độ ẩm (Do_am hoặc do_am)\n    var valHumid = (item.Do_am !== undefined) ? item.Do_am : item.do_am;\n    if (valHumid !== null && valHumid !== undefined) {\n        mergedMap[timeKey].do_am = valHumid;\n    }\n});\n\n// 4. Sắp xếp lại từ mới nhất -> cũ nhất\nvar result = Object.values(mergedMap).sort(function (a, b) {\n    return new Date(b.time) - new Date(a.time);\n});\n\nmsg.payload = result;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 3,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 820,
+        "wires": [
+            [
+                "a1990125d0c08c57"
+            ]
+        ]
+    },
+    {
+        "id": "437342a52c5a44ea",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "50bb1a635651beb6",
+        "type": "ui_group",
+        "name": "Text",
+        "tab": "71caf066b4bf2ae9",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "559dbf99fd68be03",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d959a4537c6efaa8",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "iot_data",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "71caf066b4bf2ae9",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c36192ccd52f7e33",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-contrib-influxdb": "0.7.0"
+        }
+    }
+]

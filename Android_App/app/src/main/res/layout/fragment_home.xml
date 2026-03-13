@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0F2F1"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nhiệt độ phòng"
+            android:textSize="18sp"
+            android:textColor="#00796B"/>
+
+        <TextView
+            android:id="@+id/txtTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-- °C"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/ic_launcher_background"
+            android:backgroundTint="#009688"
+            android:padding="20dp"/>
+
+        <Space android:layout_height="15dp" android:layout_width="match_parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Độ ẩm phòng"
+            android:textSize="18sp"
+            android:textColor="#03A9F4" />
+
+        <TextView
+            android:id="@+id/txtHumid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-- %"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/ic_launcher_background"
+            android:backgroundTint="#03A9F4"
+            android:padding="20dp"/>
+
+        <TextView
+            android:id="@+id/txtWarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚠️ CẢNH BÁO ⚠️"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#D32F2F"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"/>
+
+        <Space android:layout_height="10dp" android:layout_width="match_parent"/>
+
+        <TextView
+            android:id="@+id/txtMQTTStatus"
+            android:text="● Trạng thái server: Đang kết nối..."
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtESP32Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FF5722"
+            android:text="📶 Thiết bị: Đang tìm kiếm..." />
+
+        <Space android:layout_height="10dp" android:layout_width="match_parent"/>
+
+        <Button
+            android:id="@+id/btnMute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BẤM ĐỂ TẮT TIẾNG CÒI"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:layout_marginTop="10dp"/>
+
+        <Space android:layout_height="10dp" android:layout_width="match_parent"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swFan"
+            android:text="KÍCH HOẠT CẢNH BÁO TỰ ĐỘNG"
+            android:textSize="15sp"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF" />
+
+        <Space android:layout_height="10dp" android:layout_width="match_parent"/>
+
+        <Button
+            android:id="@+id/btnLimitConfig"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:backgroundTint="#00897B"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="CÀI ĐẶT NGƯỠNG: 23.5 °C"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:cornerRadius="0dp" />
+
+        <Space android:layout_height="10dp" android:layout_width="match_parent"/>
+
+        <Button
+            android:id="@+id/btnLimitHumid"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:backgroundTint="#03A9F4"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="CÀI ĐẶT NGƯỠNG ẨM: 70 %"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:cornerRadius="0dp" />
+
+        <Space android:layout_height="10dp" android:layout_width="match_parent"/>
+
+        <ToggleButton
+            android:id="@+id/btnSystemRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00897B"
+            android:padding="0dp"
+            android:textColor="#FFFFFF"
+            android:textOff="ĐANG DỪNG GHI DỮ LIỆU"
+            android:textOn="ĐANG GHI DỮ LIỆU"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:cornerRadius="20dp" />
+
+        <Space android:layout_height="30dp" android:layout_width="match_parent"/>
+
+    </LinearLayout>
+</ScrollView>
