@@ -14,17 +14,9 @@ Một hệ thống IoT tự chủ (Self-hosted) được xây dựng từ A-Z (P
 * **Hạ tầng Server (Backend):** Node-RED, InfluxDB, Mosquitto MQTT, Grafana (Triển khai 100% qua Docker).
 * **Ứng dụng di động:** Android SDK, Kotlin, Paho MQTT Client, Foreground Service.
 
-## 📸 Hình ảnh dự án
-*(Bạn hãy thay link ảnh thực tế của bạn vào đây sau khi push code nhé)*
-* [Ảnh chụp thiết bị phần cứng]
-* [Ảnh chụp màn hình App (Xanh/Đỏ)]
-* [Ảnh chụp Dashboard Grafana trên máy tính]
-
 ---
 
 ## 🚀 Hướng dẫn cài đặt & Chạy dự án (Quick Start)
-
-Dự án được thiết kế theo nguyên tắc "Clean Code", giúp bạn dễ dàng triển khai lại trên hệ thống mạng của mình chỉ với vài thao tác cấu hình.
 
 ### Bước 1: Khởi chạy Server Backend
 1. Cài đặt Docker và Docker Compose trên máy tính/VPS của bạn.
